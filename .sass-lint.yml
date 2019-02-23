@@ -1,0 +1,265 @@
+#options:
+#  merge-default-rules: false
+#  formatter: html
+#  output-file: src/sass-lint.html
+#  max-warnings: 50 # Raise an error if more warnings than this number
+#  config-file: node_modules/.../.sass-lint.yml # Point to sass lint config file
+files:
+  include:
+    - 'src/**/*.scss'
+  ignore:
+    - 'node_modules'
+rules: # 0 = off, 1 = warning, 2 = error
+  attribute-quotes:
+    - 2
+    -
+      include: true
+  bem-depth:
+    - 0 # Don't use BEM
+    -
+      max-depth: 1
+  border-zero:
+    - 2
+    -
+      convention: none
+  brace-style:
+    - 2
+    -
+      style: '1tbs'
+      allow-single-line: false
+  class-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please use hyphenated lower case class names'
+#      ignore:
+#        - ignoreMe
+  clean-import-paths:
+    - 2
+    -
+      filename-extension: false
+      leading-underscore: false # TODO: review this, as may be able to mark dir as partials with leading _
+  declarations-before-nesting: 2
+  empty-args:
+    - 2
+    -
+      include: false
+  empty-line-between-blocks:
+    - 2
+    -
+      include: true
+      allow-single-line-rulesets: false
+  extends-before-declarations: 2
+  extends-before-mixins: 2
+  final-newline:
+    - 2
+    -
+      include: true
+  force-attribute-nesting: 0
+  force-element-nesting: 2
+  force-pseudo-nesting: 0
+  function-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please use hyphenated lower case for function names'
+  hex-length:
+    - 2
+    -
+      style: short
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  id-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please use hyphenated lower case for ids'
+#      ignore:
+#      - ignoreMe
+  indentation:
+    - 2
+    -
+      size: 2
+  leading-zero:
+    - 2
+    -
+      include: true
+  max-file-line-count:
+    - 1
+    -
+      length: 300
+  max-line-length:
+    - 1
+    -
+      length: 80
+  mixin-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please use hyphenated lower case for mixins'
+  mixins-before-declarations: 2
+  nesting-depth:
+    - 2
+    -
+      max-depth: 3
+  no-attribute-selectors: 2
+  no-color-hex: 0
+  no-color-keywords: 2
+  no-color-literals:
+    - 2
+    -
+      allow-map-identifiers: true
+      allow-rgba: true
+      allow-variable-identifiers: true
+  no-combinators: 0
+  no-css-comments: 2
+  no-debug: 2
+  no-disallowed-properties:
+    - 0
+#    -
+#      properties:
+#        - 'z-index'
+  no-duplicate-properties: 2
+  no-empty-rulesets: 2
+  no-extends: 0
+  no-ids: 2
+  no-important: 2
+  no-invalid-hex: 2
+  no-mergeable-selectors: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-attribute: true
+      allow-element-with-class: false
+      allow-element-with-id: false
+  no-trailing-whitespace: 2
+  no-trailing-zero: 2
+  no-transition-all: 2
+  no-universal-selectors: 2
+  no-url-domains: 2
+  no-url-protocols: 2
+  no-vendor-prefixes:
+    - 1
+    -
+#      additional-identifiers: ['webkit', 'ms', 'o']
+#      excluded-identifiers: []
+      ignore-standard: false
+  no-warn: 2
+  one-declaration-per-line: 2
+  placeholder-in-extend: 0
+  placeholder-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please user hyphenated lower case for placeholders'
+  property-sort-order:
+    - 2
+    -
+      order: 'alphabetical'
+      ignore-custom-properties: false
+  property-units:
+    - 2
+    -
+      global:
+#        - ch
+        - em
+#        - ex
+        - rem
+#        - cm
+#        - in
+#        - mm
+#        - pc
+#        - pt
+        - px
+#        - q
+        - vh
+        - vw
+#        - vmin
+#        - vmax
+        - deg
+#        - grad
+#        - rad
+#        - turn
+#        - ms
+        - s
+#        - Hz
+#        - kHz
+#        - dpi
+#        - dpcm
+#        - dppx
+        - '%'
+#      per-property: {}
+  pseudo-element: 2
+  quotes:
+    - 2
+    -
+      style: single
+  shorthand-values:
+    - 2
+    -
+      allowed-shorthands:
+        - 1
+        - 2
+        - 3
+  single-line-per-selector: 2
+  space-after-bang:
+    - 2
+    -
+      include: false
+  space-after-colon:
+    - 2
+    -
+      include: true
+  space-after-comma:
+    - 2
+    -
+      include: true
+  space-around-operator:
+    - 2
+    -
+      include: true
+  space-before-bang:
+    - 2
+    -
+      include: true
+  space-before-brace:
+    - 2
+    -
+      include: true
+  space-before-colon:
+    - 2
+    -
+      include: false
+  space-between-parens:
+    - 2
+    -
+      include: false
+  trailing-semicolon:
+    - 2
+    -
+      include: true
+  url-quotes: 2
+  variable-for-property:
+    - 2
+    -
+      properties: ['background-image', 'background-color', 'color']
+      allow-map-get: true
+#      allowed-functions: []
+  variable-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+#      convention-explanation: 'Please use hyphenated lower case for variables'
+  zero-unit:
+    - 2
+    -
+      include: false

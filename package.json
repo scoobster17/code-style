@@ -1,0 +1,29 @@
+{
+  "name": "code-style",
+  "version": "0.0.1",
+  "description": "Personal coding style configurations",
+  "main": "tsconfig.json",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scoobster17/code-style.git"
+  },
+  "keywords": [
+    "code",
+    "style",
+    "coding",
+    "linting",
+    "tsconfig",
+    "tslint",
+    "sass-lint"
+  ],
+  "author": "Phil Gibbins <scoobster17@hotmail.co.uk> (http://www.philgibbins.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scoobster17/code-style/issues"
+  },
+  "homepage": "https://github.com/scoobster17/code-style#readme",
+  "dependencies": {
+    "tslint-eslint-rules": "^5.4.0"
+  }
+}
