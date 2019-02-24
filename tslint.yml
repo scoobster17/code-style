@@ -3,10 +3,15 @@ extends:
 #rules-directory:
 #  - 'path/to/custom/rules'
 rules:
+  ##############################################################################
+  #  CORE TSLINT
+  ##############################################################################
   adjacent-overload-signatures: false
+  align: false
   array-type:
     options:
-      - generic
+    - generic
+  arrow-parens: false
   arrow-return-shorthand: true
   await-promise: true
   ban-comma-operator: true
@@ -31,6 +36,7 @@ rules:
       - 20
   deprecation: true
   encoding: true
+  eofline: true
   file-header: false
   file-name-casing:
     options:
@@ -38,10 +44,19 @@ rules:
   forin: false # TODO: understand this rule
   function-constructor: true
   import-blacklist: false
+  import-spacing: true
   increment-decrement: false
+  indent:
+    options:
+      - spaces
+      - 2
   interface-name: false
   interface-over-type-literal: false
+  jsdoc-format: true
   label-position: true
+  linebreak-style:
+    options:
+      - 'LF'
   match-default-export-name: true
   max-classes-per-file:
     options:
@@ -49,8 +64,14 @@ rules:
   max-file-line-count:
     options:
       - 300
+  max-line-length:
+    options:
+      limit: 120
+#      ignore-pattern: /regex-here/
   member-access: true
   member-ordering: false
+  new-parens: true
+  newline-before-return: false
   newline-per-chained-call: true
   no-angle-bracket-type-assertion: true
   no-any: true
@@ -58,6 +79,9 @@ rules:
   no-bitwise: true
   no-boolean-literal-compare: true
   no-conditional-assignment: true
+  no-consecutive-blank-lines:
+    options:
+      - 2
   no-console: true
   no-construct: true
   no-debugger: true
@@ -82,6 +106,7 @@ rules:
   no-internal-module: true
   no-invalid-template-strings: true
   no-invalid-this: true
+  no-irregular-whitespace: true
   no-magic-numbers: true
   no-mergeable-namespace: true
   no-misused-new: true
@@ -104,6 +129,7 @@ rules:
   no-submodule-imports: true
   no-switch-case-fall-through: true
   no-this-assignment: true
+  no-trailing-whitespace: true
   no-unbound-method: true
   no-unnecessary-callback-wrapper: true
   no-unnecessary-class: true
@@ -118,6 +144,7 @@ rules:
   no-var-keyword: true
   no-var-requires: true
   no-void-expression: true
+  number-literal-format: true
   object-literal-key-quotes:
     options:
       - as-needed
@@ -146,9 +173,17 @@ rules:
   prefer-template: true
   prefer-while: false
   promise-function-async: true
+  quotemark:
+    options:
+      - single
+      - jsx-single
+      - avoid-escape
   radix: true
   restrict-plus-operands: true
   return-undefined: true
+  semicolon:
+    options:
+      - always
   space-before-function-paren:
     options:
       -
@@ -162,6 +197,7 @@ rules:
   strict-type-predicates: true
   switch-default: true
   switch-final-break: false
+  trailing-comma: true
   triple-equals: true
   type-literal-delimiter: true
   typedef:
@@ -175,6 +211,20 @@ rules:
       - member-variable-declaration
       - object-destructuring
       - array-destructuring
+  typedef-whitespace:
+    options:
+      -
+        call-signature: nospace
+        index-signature: nospace
+        parameter: nospace
+        property-declaration: nospace
+        variable-declaration: nospace
+      -
+        call-signature: onespace
+        index-signature: onespace
+        parameter: onespace
+        property-declaration: onespace
+        variable-declaration: onespace
   typeof-compare: true
   unified-signatures: true
   unnecessary-bind: true
@@ -185,6 +235,80 @@ rules:
     options:
       - check-format
       - ban-keywords
+  whitespace:
+    options:
+      - check-branch
+      - check-decl
+      - check-operator
+      - check-module
+      - check-separator
+      - check-rest-spread
+      - check-type
+      - check-typecast
+      - check-type-operator
+      - check-preblock
+      - check-postbrace
+  ##############################################################################
+  #  TSLINT-ESLINT-RULES
+  ##############################################################################
+  array-bracket-spacing:
+    options:
+      - always
+  block-spacing: true
+  brace-style:
+    options:
+      - '1tbs'
+  handle-callback-err: false
+  no-constant-condition: true
+  no-control-regex: true
+  no-duplicate-case: true
+  no-empty-character-class: tue
+  no-ex-assign: true
+  no-extra-boolean-cast: true
+  no-extra-semi: true
+  no-inner-declarations: true
+  no-invalid-regexp: true
+  no-multi-spaces: true
+  no-regex-spaces: true
+  no-unexpected-multiline: true
+  object-curly-spacing:
+    options:
+      - always
+  sort-imports: true
+  space-in-parens:
+    options:
+      - never
+  ter-arrow-body-style:
+    options:
+      - 'as-needed'
+  ter-arrow-parens:
+    options:
+      - 'as-needed'
+  ter-arrow-spacing: true
+  ter-computed-property-spacing:
+    options:
+      - never
+  ter-func-call-spacing:
+    options:
+      - never
+  ter-indent: true
+  ter-max-len:
+    options:
+      - 120
+  ter-newline-after-var: false
+  ter-no-irregular-whitespace: true
+  ter-no-mixed-spaces-and-tabs: true
+  ter-no-proto: true
+  ter-no-script-url: true
+  ter-no-self-compare: true
+  ter-no-sparse-arrays: true
+  ter-no-tabs: true
+  ter-padded-blocks:
+    options:
+      - never
+  ter-prefer-arrow-callback: true
+  valid-jsdoc: true
+  valid-typeof: true
 #jsRules: true
 defaultSeverity: error
 #linterOptions:
