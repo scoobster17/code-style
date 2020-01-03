@@ -1,5 +1,5 @@
 {
-  "name": "code-style",
+  "name": "@philgibbins/code-style",
   "version": "0.0.1",
   "description": "Personal coding style configurations for editors/programming languages",
   "author": "Phil Gibbins <phil@philgibbins.com> (https://philgibbins.com)",
@@ -25,7 +25,9 @@
   "bugs": {
     "url": "https://github.com/scoobster17/code-style/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "postinstall": "echo 'Checking for code-style dependency package updates...' && npm outdated"
+  },
   "dependencies": {
     "sass-lint": "^1.13.1",
     "tslint": "^5.20.1",
