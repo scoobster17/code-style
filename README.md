@@ -5,7 +5,7 @@ Here you can find preferred code style configurations for various programming la
 ## Usage
 
 ### Installation
-To install, run ```npm i code-style```.
+To install, run `npm i -D @philgibbins/code-style`.
 
 **Note** this package includes the packages it configures, e.g. `sass-lint` and `tslint`, however it does not include
 `typescript` itself.
