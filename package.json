@@ -2,8 +2,10 @@
   "name": "code-style",
   "version": "0.0.1",
   "description": "Personal coding style configurations for editors/programming languages",
+  "author": "Phil Gibbins <phil@philgibbins.com> (https://philgibbins.com)",
+  "license": "MIT",
   "main": "sass/.sass-lint.yml",
-  "scripts": {},
+  "homepage": "https://github.com/scoobster17/code-style#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scoobster17/code-style.git"
@@ -20,12 +22,10 @@
     "typescript",
     "ts"
   ],
-  "author": "Phil Gibbins <scoobster17@hotmail.co.uk> (https://philgibbins.com)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/scoobster17/code-style/issues"
   },
-  "homepage": "https://github.com/scoobster17/code-style#readme",
+  "scripts": {},
   "dependencies": {
     "sass-lint": "^1.13.1",
     "tslint": "^5.20.1",
