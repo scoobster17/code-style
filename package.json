@@ -25,9 +25,7 @@
   "bugs": {
     "url": "https://github.com/scoobster17/code-style/issues"
   },
-  "scripts": {
-    "postinstall": "echo 'Checking for code-style dependency package updates...' && npm outdated"
-  },
+  "scripts": {},
   "dependencies": {
     "sass-lint": "^1.13.1",
     "tslint": "^5.20.1",
