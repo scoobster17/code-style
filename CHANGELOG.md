@@ -2,6 +2,9 @@
 
 ## v0.X.X
 
+### v0.0.4
+Add tsconfig(s)
+
 ### v0.0.3
 Remove unnecessary postinstall script
 
